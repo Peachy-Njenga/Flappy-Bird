@@ -21,7 +21,7 @@ function Bird:update(dt)
     self.dy = self.dy + GRAVITY * dt
 
     if love.keyboard.wasPressed('space') then
-        self.dy = -5
+        self.dy = -3
     end
 
     --apply this velocity to the y position of the bird

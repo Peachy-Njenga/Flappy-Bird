@@ -34,8 +34,9 @@ local groundScroll = 0
 local BACKGROUND_SCROLL_SPEED = 20
 local GROUND_SCROLL_SPEED = 60
 
---point at which the background with loop back: start the scroll again- for continuity
+--point at which the background and groundwill loop back: start the scroll again- for continuity
 local BACKGROUND_LOOPING_POINT = 413
+local GROUND_LOOPING_POINT = 514
 
 --the bird sprite
 local bird = Bird()
@@ -96,7 +97,7 @@ function love.update(dt)
 
     --scroll the ground to move with speed: speed * dt, loops back to 0, after screen width is passed
     groundScroll = (groundScroll + GROUND_SCROLL_SPEED * dt)
-        % VIRTUAL_WIDTH
+        % GROUND_LOOPING_POINT
 
     --timer for spawning the pipes
     spawnTimer = spawnTimer + dt

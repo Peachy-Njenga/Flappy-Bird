@@ -1,11 +1,11 @@
 PipePair = Class{}
 
 --gap between the pipes
-local GAP_HEIGHT = 100
+local GAP_HEIGHT = 90
 
 function PipePair:init(y)
     --initialize pipes past right edg eof the screen 
-    self.x = VIRTUAL_HEIGHT + 32
+    self.x = VIRTUAL_WIDTH + 32
 
     --y value is for top pipes
     self.y = y
